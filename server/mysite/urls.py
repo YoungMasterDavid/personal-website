@@ -16,9 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from portfolio.views import create_admin
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('portfolio.urls')),
-    path('create-admin/', include('portfolio.urls')),  # Admin creation endpoint
+    path('create-admin/', create_admin),  # Admin creation endpoint
 ]
