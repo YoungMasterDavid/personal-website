@@ -54,6 +54,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
 
 ROOT_URLCONF = 'mysite.urls'
@@ -132,7 +133,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "https://david-website-psi.vercel.app",
-    "http://david-website-david-czar-c-porras-projects.vercel.app",
-    "http://david-website-git-main-david-czar-c-porras-projects.vercel.app",
+    "https://david-website-david-czar-c-porras-projects.vercel.app",
+    "https://david-website-git-main-david-czar-c-porras-projects.vercel.app",
     "https://personal-website-ngz5.onrender.com",
+    
 ]
