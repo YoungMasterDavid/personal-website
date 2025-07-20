@@ -25,21 +25,6 @@ This is the source code for my personal portfolio website built with **React.js 
 
 ---
 
-## 📂 Folder Structure
-personal-website/
-├── client/ # React frontend
-│ ├── src/
-│ │ ├── components/ # Navbar, Footer
-│ │ ├── pages/ # Home, About, Projects, Contact, Skills, Tools
-│ │ └── assets/ # Resume & icons
-│ └── public/ # Static assets
-├── server/ or backend/ # Django backend
-│ ├── portfolio/ # App with models, views, serializers
-│ └── manage.py
-
-
----
-
 ## 🔑 Features
 
 - 👨‍💻 About Me + Education Background
