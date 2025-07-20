@@ -1,6 +1,7 @@
 // src/pages/Contact.jsx
 
 import React, { useState } from 'react';
+import '../styles/global.css'; // Only needed if not already imported in index.js
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -42,16 +43,15 @@ export default function Contact() {
     }
   };
 
-
   return (
-    <section style={styles.container}>
-      <div style={styles.formWrapper}>
-        <h2 style={styles.heading}>Contact Me</h2>
-        <p style={styles.subtext}>Send me a message and I’ll get back to you soon!</p>
+    <section className="contact-container">
+      <div className="contact-wrapper">
+        <h2 className="section-heading">Contact Me</h2>
+        <p className="contact-subtext">Send me a message and I’ll get back to you soon!</p>
 
-        {submitted && <p style={styles.success}>✅ Your message was sent!</p>}
+        {submitted && <p className="contact-success">✅ Your message was sent!</p>}
 
-        <form onSubmit={handleSubmit} style={styles.form}>
+        <form onSubmit={handleSubmit} className="contact-form">
           <input
             type="text"
             name="name"
@@ -59,7 +59,7 @@ export default function Contact() {
             value={formData.name}
             onChange={handleChange}
             required
-            style={styles.input}
+            className="contact-input"
           />
           <input
             type="email"
@@ -68,7 +68,7 @@ export default function Contact() {
             value={formData.email}
             onChange={handleChange}
             required
-            style={styles.input}
+            className="contact-input"
           />
           <textarea
             name="message"
@@ -77,73 +77,12 @@ export default function Contact() {
             onChange={handleChange}
             required
             rows="5"
-            style={styles.textarea}
+            className="contact-textarea"
           ></textarea>
 
-          <button type="submit" style={styles.button}>Send Message</button>
+          <button type="submit" className="contact-button">Send Message</button>
         </form>
       </div>
     </section>
   );
 }
-
-const styles = {
-  container: {
-    padding: '4rem 2rem',
-    backgroundColor: '#161b22',
-    color: '#f0f6fc',
-    display: 'flex',
-    justifyContent: 'center',
-  },
-  formWrapper: {
-    maxWidth: '600px',
-    width: '100%',
-  },
-  heading: {
-    fontSize: '2rem',
-    textAlign: 'center',
-    marginBottom: '1rem',
-    color: '#58a6ff',
-  },
-  subtext: {
-    textAlign: 'center',
-    marginBottom: '2rem',
-    color: '#8b949e',
-  },
-  form: {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '1rem',
-  },
-  input: {
-    padding: '0.75rem',
-    fontSize: '1rem',
-    borderRadius: '8px',
-    border: '1px solid #30363d',
-    backgroundColor: '#0d1117',
-    color: '#f0f6fc',
-  },
-  textarea: {
-    padding: '0.75rem',
-    fontSize: '1rem',
-    borderRadius: '8px',
-    border: '1px solid #30363d',
-    backgroundColor: '#0d1117',
-    color: '#f0f6fc',
-    resize: 'vertical',
-  },
-  button: {
-    backgroundColor: '#238636',
-    color: '#fff',
-    fontSize: '1rem',
-    padding: '0.75rem',
-    border: 'none',
-    borderRadius: '8px',
-    cursor: 'pointer',
-  },
-  success: {
-    color: '#3fb950',
-    marginBottom: '1rem',
-    textAlign: 'center',
-  },
-};
