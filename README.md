@@ -17,7 +17,6 @@ This is the source code for my personal portfolio website built with **React.js 
 - React.js
 - React Router
 - CSS (custom, with light/dark mode)
-- Responsive design (mobile-ready)
 
 ### Backend:
 - Django
