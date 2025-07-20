@@ -25,7 +25,7 @@ from decouple import config
 SECRET_KEY = config('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config('DEBUG', default=False, cast=bool)
 
 ALLOWED_HOSTS = ['david-website-psi.vercel.app', 'david-website-david-czar-c-porras-projects.vercel.app', 'david-website-git-main-david-czar-c-porras-projects.vercel.app', 'localhost', '127.0.0.1'
                  , 'personal-website-ngz5.onrender.com']
