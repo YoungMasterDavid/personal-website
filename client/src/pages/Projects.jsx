@@ -5,9 +5,10 @@ import '../styles/global.css'; // Optional if already imported
 
 export default function Projects() {
   const [projects, setProjects] = useState([]);
+  const API_BASE = process.env.REACT_APP_API_BASE_URL;
 
   useEffect(() => {
-    fetch('http://localhost:8000/api/projects/')
+    fetch(`${API_BASE}/api/projects/`)
       .then((res) => res.json())
       .then((data) => setProjects(data))
       .catch((err) => console.error(err));

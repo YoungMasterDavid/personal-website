@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-y3v+(+%ea9qtu6^v(i^st1t0ctlsa&)q^0iq)+6b@&u6%+oh*_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['david-website-psi.vercel.app', 'david-website-david-czar-c-porras-projects.vercel.app', 'david-website-git-main-david-czar-c-porras-projects.vercel.app', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -128,4 +128,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # CORS settings
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
+    "https://david-website-psi.vercel.app",
+    "http://david-website-david-czar-c-porras-projects.vercel.app",
+    "http://david-website-git-main-david-czar-c-porras-projects.vercel.app",
 ]

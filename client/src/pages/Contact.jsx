@@ -21,9 +21,9 @@ export default function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    const API_BASE = process.env.REACT_APP_API_BASE_URL;
     try {
-      const res = await fetch('http://localhost:8000/api/contact/', {
+      const res = await fetch(`${API_BASE}/api/contact/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
