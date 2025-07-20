@@ -2,6 +2,7 @@
 
 import React from 'react';
 import '../styles/global.css'; // Optional if already imported globally
+import resume from '../assets/Porras_Resume.pdf';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
 
         <div className="home-links">
           {/* <a href="mailto:dcporras008@gmail.com" className="home-button">📧 Email Me</a> */}
+          <a href={resume} download className="home-button">📄 Download Resume</a>
           <a href="https://github.com/YoungMasterDavid" target="_blank" rel="noopener noreferrer" className="home-button">💻 GitHub</a>
           <a href="https://linkedin.com/in/david-czar-porras-584324270/" target="_blank" rel="noopener noreferrer" className="home-button">🔗 LinkedIn</a>
         </div>
