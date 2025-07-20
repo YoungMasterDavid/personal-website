@@ -17,27 +17,11 @@ This is the source code for my personal portfolio website built with **React.js 
 - React.js
 - React Router
 - CSS (custom, with light/dark mode)
-- Responsive design (mobile-ready)
 
 ### Backend:
 - Django
 - Django REST Framework (DRF)
 - SQLite3 (can be swapped for PostgreSQL)
-
----
-
-## 📂 Folder Structure
-personal-website/
-├── client/ # React frontend
-│ ├── src/
-│ │ ├── components/ # Navbar, Footer
-│ │ ├── pages/ # Home, About, Projects, Contact, Skills, Tools
-│ │ └── assets/ # Resume & icons
-│ └── public/ # Static assets
-├── server/ or backend/ # Django backend
-│ ├── portfolio/ # App with models, views, serializers
-│ └── manage.py
-
 
 ---
 
