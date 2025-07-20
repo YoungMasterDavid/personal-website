@@ -20,12 +20,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-y3v+(+%ea9qtu6^v(i^st1t0ctlsa&)q^0iq)+6b@&u6%+oh*_'
+from decouple import config
+
+SECRET_KEY = config('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['david-website-psi.vercel.app', 'david-website-david-czar-c-porras-projects.vercel.app', 'david-website-git-main-david-czar-c-porras-projects.vercel.app', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['david-website-psi.vercel.app', 'david-website-david-czar-c-porras-projects.vercel.app', 'david-website-git-main-david-czar-c-porras-projects.vercel.app', 'localhost', '127.0.0.1'
+                 , 'personal-website-ngz5.onrender.com']
 
 
 # Application definition
@@ -131,4 +134,5 @@ CORS_ALLOWED_ORIGINS = [
     "https://david-website-psi.vercel.app",
     "http://david-website-david-czar-c-porras-projects.vercel.app",
     "http://david-website-git-main-david-czar-c-porras-projects.vercel.app",
+    "https://personal-website-ngz5.onrender.com",
 ]
